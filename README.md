@@ -4,6 +4,12 @@ La idea es crear un contenedor LAMP (Linux, Apache, MySQL, Php), pero con imagen
 
 En este proyecto, descargaré las imágenes _alpine_ y las uniré para poder utilizarlas como un único contenedor.
 
+Si necesitan ingresar a la imagen recuerden utilizar los comandos de _alpine_, por ejemplo:
+
+```
+$ docker run -it --rm [imagen] /bin/ash
+```
+
 
 ## Comenzando 🚀
 

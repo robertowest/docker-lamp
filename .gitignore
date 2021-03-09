@@ -13,3 +13,5 @@
 *.wps
 
 # End of https://www.toptal.com/developers/gitignore/api/text
+
+public_html/*
