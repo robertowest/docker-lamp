@@ -19,7 +19,7 @@ services:
     volumes:
       - ./public_html/:/var/www/html/
   mysql:
-    image: mariadb:latest   # mysql:5.6.40
+    image: mariadb:latest
     networks:
       - backend
     environment:

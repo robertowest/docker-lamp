@@ -26,6 +26,11 @@ git clone https://github.com/robertowest/docker-lamp.git
 docker-compose up
 ```
 
+Solo prestar atención al volumen que utilizo para las bases de datos de **MariaBD**, como es un contenedor que ya tengo creado, utilizo el volumen local que ya tengo definido. 
+
+`$HOME/Docker/mariadb/data:/var/lib/mysql`
+
+
 ## Ejecutando las pruebas ⚙️
 
 Una vez terminado el proceso de contrucción, desde nuestro navegador llamamos a la página `http://localhost:8080/`
