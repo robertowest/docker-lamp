@@ -2,12 +2,25 @@ version: "3.2"
 services:
   php:
     build: './php/'
+    container_name: lamp_php
+    networks:
+      - backend
+    ports:
+      - 9000:9000
+    volumes:
+      - ./public_html/:/var/www/html/
+  mysql:
+    image: mariadb:latest
+    container_name: lamp_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=roberto
     networks:
       - backend
     volumes:
-      - ./public_html/:/var/www/html/
+      - $HOME/Docker/mariadb/data:/var/lib/mysql
   apache:
     build: './apache/'
+    container_name: lamp_apache
     depends_on:
       - php
       - mysql
@@ -15,17 +28,9 @@ services:
       - frontend
       - backend
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./public_html/:/var/www/html/
-  mysql:
-    image: mariadb:latest
-    networks:
-      - backend
-    environment:
-      - MYSQL_ROOT_PASSWORD=roberto
-    volumes:
-      - $HOME/Docker/mariadb/data:/var/lib/mysql
 networks:
   frontend:
   backend:

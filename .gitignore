@@ -1,5 +1,27 @@
-# Created by https://www.toptal.com/developers/gitignore/api/text
-# Edit at https://www.toptal.com/developers/gitignore?templates=text
+
+# Created by https://www.toptal.com/developers/gitignore/api/text,backup,visualstudiocode,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=text,backup,visualstudiocode,git
+
+### Backup ###
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
 
 ### Text ###
 *.doc
@@ -12,6 +34,17 @@
 *.wpd
 *.wps
 
-# End of https://www.toptal.com/developers/gitignore/api/text
+### VisualStudioCode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/text,backup,visualstudiocode,git
 
 public_html/*
